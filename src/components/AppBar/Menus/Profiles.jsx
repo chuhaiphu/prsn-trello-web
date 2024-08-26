@@ -26,7 +26,7 @@ function Profiles() {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
-          <Avatar sx={{ width: 32, height: 32 }} src="https://res.cloudinary.com/dqb50hlse/image/upload/v1724060880/capstone_express_orm/xbhjx2npkvpvef21afx1.png" />
+          <Avatar sx={{ width: 36, height: 36 }} src="https://res.cloudinary.com/dqb50hlse/image/upload/v1724060880/capstone_express_orm/xbhjx2npkvpvef21afx1.png" />
         </IconButton>
       </Tooltip>
       <Menu
