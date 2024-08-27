@@ -6,7 +6,7 @@ import { Badge, Box, Button, InputAdornment, TextField, Tooltip, Typography } fr
 import SvgIcon from "@mui/material/SvgIcon"
 import { useState } from 'react'
 import { ReactComponent as TrelloIcon } from '~/assets/trello.svg'
-import ModeSelect from "~/components/ModeSelect"
+import ModeSelect from "~/components/ModeSelect/ModeSelect"
 import Profiles from './Menus/Profiles'
 import Recent from './Menus/Recent'
 import Starred from './Menus/Starred'
