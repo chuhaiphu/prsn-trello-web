@@ -3,8 +3,12 @@ import { Box, Button, Divider, ListItemIcon, ListItemText, Menu, MenuItem, Toolt
 import { useState } from "react";
 import ListCards from "./ListCards/ListCards";
 import theme from "~/theme";
+import { mapOrder } from "~/utils/sorts"
 
-function Column() {
+
+function Column({column}) {
+  const orderedCards = mapOrder(column?.cards, column?.cardOrderIds, '_id')
+
   const [anchorEl, setAnchorEl] = useState(null)
   const open = Boolean(anchorEl)
   const handleClick = (event) => {
@@ -41,7 +45,7 @@ function Column() {
             fontWeight: 'bold',
             cursor: 'pointer',
           }}>
-          Column Title
+          {column?.title}
         </Typography>
         {/* More options dropdown */}
         <Box>
@@ -94,7 +98,7 @@ function Column() {
       </Box>
 
       {/* List Card */}
-      <ListCards />      
+      <ListCards cards={orderedCards}/>      
 
       {/* Footer */}
       <Box

@@ -1,5 +1,6 @@
 import { AddToDrive, Bolt, Dashboard, FilterList, PersonAdd, VpnLock } from "@mui/icons-material"
 import { Avatar, AvatarGroup, Box, Button, Chip, Tooltip } from "@mui/material"
+import {capitalizeFirstLetter} from '~/utils/formatters'
 
 const MENU_STYLES = {
   color: 'white',
@@ -15,7 +16,7 @@ const MENU_STYLES = {
   }
 }
 
-function BoardBar() {
+function BoardBar({board}) {
   return (
     <Box sx={{
       width: "100%",
@@ -36,13 +37,13 @@ function BoardBar() {
         <Chip
           sx={MENU_STYLES}
           icon={<Dashboard />}
-          label="TrungQuanDev MERN Stack Board"
+          label={board?.title}
           clickable
         />
         <Chip
           sx={MENU_STYLES}
           icon={<VpnLock />}
-          label="Public/Private Workspace"
+          label={capitalizeFirstLetter(board?.type)}
           clickable
         />
         <Chip
